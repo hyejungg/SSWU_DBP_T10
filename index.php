@@ -101,7 +101,6 @@ if (isset($_GET['city']) && isset($_GET['gu'])) {
   <style>
 
   table.list-table {
-    width:100%;
     border-collapse: collapse;
     text-align: center;
     line-height: 1;
@@ -264,6 +263,7 @@ table.list-table td {
     color: #31708f
   }
   a{
+    text-decoration: none;
     margin: 0px;
     padding: 0px;
     border: 0px;
