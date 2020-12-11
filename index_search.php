@@ -243,6 +243,7 @@ if (strstr($filtered_disabled, 'nondisabled')) {
     color: #31708f
   }
   a{
+    text-decoration: none;
     margin: 0px;
     padding: 0px;
     border: 0px;
