@@ -1,15 +1,15 @@
 <?php
 $link = mysqli_connect('localhost', 'dbpt10', 'dbpadmint10!', 'dbpt10');
 
-$filtered_id = mysqli_real_escape_string($link, $_GET['city']);
+$filtered_city = mysqli_real_escape_string($link, $_GET['city']);
 $filtered_gu = mysqli_real_escape_string($link, $_GET['gu']);
 
 if (isset($_GET['disabled'])) {
     $filtered_disabled = mysqli_real_escape_string($link, $_GET['disabled']);
-    $query = "select isPublic from toilet where road_addr like '%{$filtered_gu}%' and (m_d_toilet != 0 || w_d_toilet != 0)";
+    $query = "select isPublic from toilet where road_addr like '%{$filtered_city}%' and road_addr like '%{$filtered_gu}%' and (m_d_toilet != 0 || w_d_toilet != 0)";
 } else {
     $filtered_disabled = 'nondisabled';
-    $query = "select isPublic from toilet where road_addr like '%{$filtered_gu}%'";
+    $query = "select isPublic from toilet where road_addr like '%{$filtered_city}%'and road_addr like '%{$filtered_gu}%'";
 }
 
 if (isset($_GET['page'])) {
@@ -43,7 +43,7 @@ $nextBlock = $nowBlock+1;
 
 // if (empty($filtered_disabled)) {
 if (strstr($filtered_disabled, 'nondisabled')) {
-    $query3 =   "select isPublic, toilet_name, road_addr, isUnisex, m_d_toilet, w_d_toilet, m_k_toilet, w_k_toilet, open_time from toilet where road_addr like '%{$filtered_gu}%' limit {$start_num}, {$list}";
+    $query3 =   "select isPublic, toilet_name, road_addr, isUnisex, m_d_toilet, w_d_toilet, m_k_toilet, w_k_toilet, open_time from toilet where road_addr like '{$filtered_city}%' and road_addr like '%{$filtered_gu}%' limit {$start_num}, {$list}";
     $result3 = mysqli_query($link, $query3) or die(mysqli_error($link));
     $gu_info = '';
     while ($row = mysqli_fetch_array($result3)) {
@@ -60,7 +60,7 @@ if (strstr($filtered_disabled, 'nondisabled')) {
         $gu_info .= '</tr>';
     }
 } else {
-    $query3 =   "select isPublic, toilet_name, road_addr, isUnisex, m_d_toilet, w_d_toilet, m_k_toilet, w_k_toilet, open_time from toilet where road_addr like '%{$filtered_gu}%' && (m_d_toilet != 0 || w_d_toilet != 0) limit {$start_num}, {$list}";
+    $query3 =   "select isPublic, toilet_name, road_addr, isUnisex, m_d_toilet, w_d_toilet, m_k_toilet, w_k_toilet, open_time from toilet where road_addr like '{$filtered_city}%' and  road_addr like '%{$filtered_gu}%' && (m_d_toilet != 0 || w_d_toilet != 0) limit {$start_num}, {$list}";
     $result3 = mysqli_query($link, $query3) or die(mysqli_error($link));
     $gu_info = '';
     while ($row = mysqli_fetch_array($result3)) {
@@ -129,6 +129,7 @@ if (strstr($filtered_disabled, 'nondisabled')) {
     }
     // 선택한거 바꿈
     now = target;
+    mapPoint(parseInt(target.id.slice(6)))
     target.src = target.src.slice(0, target.src.length-7) + 'on.png' // 주소변경
   }
   // 선택된거 끄는 코드
@@ -556,35 +557,36 @@ display:inline-block;zoom:1;.display:inline;
     if ($page <= 1) { //만약 page가 1보다 크거나 같다면
       echo "<span class='fo_re'>처음</span>"; //처음이라는 글자에 빨간색 표시
     } else {
-        echo "<a href='?page=1&city={$filtered_id}&gu={$filtered_gu}&disabled={$filtered_disabled}'> 처음 </a>"; // 처음글자에 1번페이지로 갈 수있게 링크
+        echo "<a href='?page=1&city={$filtered_city}&gu={$filtered_gu}&disabled={$filtered_disabled}'> 처음 </a>"; // 처음글자에 1번페이지로 갈 수있게 링크
     }
     if ($page <= 1) { //만약 page가 1보다 크거나 같다면 빈값
     } else {
         $pre = $page-1; //pre변수에 page-1을 해준다 만약 현재 페이지가 3인데 이전버튼을 누르면 2번페이지로 갈 수 있게 함
-      echo "<a href='?page=$pre&city={$filtered_id}&gu={$filtered_gu}&disabled={$filtered_disabled}'> 이전 </a>"; //이전글자에 pre변수를 링크한다. 이러면 이전버튼을 누를때마다 현재 페이지에서 -1하게 된다.
+      echo "<a href='?page=$pre&city={$filtered_city}&gu={$filtered_gu}&disabled={$filtered_disabled}'> 이전 </a>"; //이전글자에 pre변수를 링크한다. 이러면 이전버튼을 누를때마다 현재 페이지에서 -1하게 된다.
     }
     for ($i=$block_start; $i<=$block_end; $i++) {
         //for문 반복문을 사용하여, 초기값을 블록의 시작번호를 조건으로 블록시작번호가 마지박블록보다 작거나 같을 때까지 $i를 반복시킨다
       if ($page == $i) { //만약 page가 $i와 같다면
         echo "<span class='fo_re'>[$i]</span>"; //현재 페이지에 해당하는 번호에 굵은 빨간색을 적용한다
       } else {
-          echo "<a href='?page=$i&city={$filtered_id}&gu={$filtered_gu}&disabled={$filtered_disabled}'>[$i]</a>"; //아니라면 $i
+          echo "<a href='?page=$i&city={$filtered_city}&gu={$filtered_gu}&disabled={$filtered_disabled}'>[$i]</a>"; //아니라면 $i
       }
     }
     if ($block_num >= $total_block) { //만약 현재 블록이 블록 총개수보다 크거나 같다면 빈 값
     } else {
         $next = $page + 1; //next변수에 page + 1을 해준다.
-      echo "<a href='?page=$next&city={$filtered_id}&gu={$filtered_gu}&disabled={$filtered_disabled}'> 다음 </a>"; //다음글자에 next변수를 링크한다. 현재 4페이지에 있다면 +1하여 5페이지로 이동하게 된다.
+      echo "<a href='?page=$next&city={$filtered_city}&gu={$filtered_gu}&disabled={$filtered_disabled}'> 다음 </a>"; //다음글자에 next변수를 링크한다. 현재 4페이지에 있다면 +1하여 5페이지로 이동하게 된다.
     }
     if ($page >= $total_page) { //만약 page가 페이지수보다 크거나 같다면
       echo "<span class='fo_re'> 마지막 </span>"; //마지막 글자에 긁은 빨간색을 적용한다.
     } else {
-        echo "<a href='?page=$total_page&city={$filtered_id}&gu={$filtered_gu}&disabled={$filtered_disabled}'> 마지막 </a>"; //아니라면 마지막글자에 total_page를 링크한다.
+        echo "<a href='?page=$total_page&city={$filtered_city}&gu={$filtered_gu}&disabled={$filtered_disabled}'> 마지막 </a>"; //아니라면 마지막글자에 total_page를 링크한다.
     }
     ?>
   </div>
 </div>
 </article>
+<script src="./images/connet.js"></script>
 </body>
 </html>
 <script>
