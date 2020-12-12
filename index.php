@@ -148,6 +148,7 @@ table.list-table td {
     }
     // 선택한거 바꿈
     now = target;
+    mapPoint(parseInt(target.id.slice(6)))
     target.src = target.src.slice(0, target.src.length-7) + 'on.png' // 주소변경
   }
   // 선택된거 끄는 코드
@@ -602,6 +603,7 @@ display:inline-block;zoom:1;.display:inline;
   </div>
 </div>
 </article>
+<script src="./images/connet.js"></script>
 </body>
 </html>
 <script>
