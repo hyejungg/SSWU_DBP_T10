@@ -4,7 +4,7 @@
 ## :exclamation: 홈페이지 링크
 http://dbpt10.dothome.co.kr/final/intro.html
 
-//최종코드 intro.html / index.php / index_search.php
+//최종 final 폴더 + images 폴더
 
 ## :exclamation: 개발과정 및 역할분담
 ### 1. 개발과정
