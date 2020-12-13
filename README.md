@@ -96,7 +96,7 @@ http://dbpt10.dothome.co.kr/final/intro.html
 https://docs.google.com/document/d/1e8HGwMeWKJhhNpcsvZtUjkGENvkqhnQ0oDc9zJjqaZc/edit
 
 ### 2. 역할분담
-- 20180971 김연서 : search.php, search_city.php, 작성, index.php 수정
-- 20180977 김혜정 : search.php, search_city.php 작성, 호스팅 + db import, 코드 병합, 서버에 올리기, README.md 작성 
-- 20172049 백지우 : map.php, index01.php
-- 20160530 이지연 : map.html, intro.html 작성, image 수집 
+- 20180971 김연서 : 
+- 20180977 김혜정 : 
+- 20172049 백지우 : 
+- 20160530 이지연 : 
