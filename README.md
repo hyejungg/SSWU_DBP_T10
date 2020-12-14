@@ -11,11 +11,20 @@ http://dbpt10.dothome.co.kr/final/intro.html
 
 ### ❣️ 본 페이지로 들어가기 전, 개발 배경과 소감 등 프로젝트에 대한 전반적인 정보를 제공합니다.
 <img width="960" alt="intro" src="https://user-images.githubusercontent.com/70576313/102041089-d7c04400-3e11-11eb-9d54-8ad111d5aa97.png"> 
- 
+
+### ❣️ ENTER버튼을 누르면 본 페이지로 입장합니다. 지역을 선택하기 위해 전국지도를 띄우고 상세 정보 출력을 위한 테이블을 하단에 보여줍니다. 
 <img width="960" alt="index" src="https://user-images.githubusercontent.com/70576313/102040997-a3e51e80-3e11-11eb-9e09-c9118b6c5e4e.png">
+
+### ❣️ 경기도를 선택했을 때 해당 지역이 초록색으로 표시되고, 경기도에 있는 모든 공중화장실을 지도 오른쪽 테이블에 나타냅니다.
 <img width="960" alt="select" src="https://user-images.githubusercontent.com/70576313/102041117-e73f8d00-3e11-11eb-93d7-2ab0cb819c3a.png"> 
+
+### ❣️ 서울특별시의 공중화장실의 상세 정보를 검색합니다.
 <img width="960" alt="search_city" src="https://user-images.githubusercontent.com/70576313/102041132-f1fa2200-3e11-11eb-9b64-9a30dfe278b3.png">
+
+### ❣️ 서울특별시 강남구의 공중화장실의 상세 정보를 검색합니다.
 <img width="960" alt="search_gu" src="https://user-images.githubusercontent.com/70576313/102041140-f8889980-3e11-11eb-92c7-ef7785c8f184.png">
+
+### ❣️ 서울특별시 강남구의 공중화장실의 상세 정보를 출력하고, 장애인용 화장실을 체크하면 장애인용 화장실이 설치된 화장실만 출력합니다. 
 <img width="960" alt="res" src="https://user-images.githubusercontent.com/70576313/102041151-fde5e400-3e11-11eb-85df-f28f44aeb80f.png">
 
 
