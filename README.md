@@ -1,13 +1,16 @@
 # 전국공중화장실현황
 2020-2 SSWU DBP-T10 기말과제
+//20160530 이지연, 20172049 백지우, 20180971 김연서, 20180977 김혜정
 
 ## :exclamation: 홈페이지 링크
 http://dbpt10.dothome.co.kr/final/intro.html
 
 //최종 final 폴더 + images 폴더
 
+## :exclamation: 홈페이지 소개
+
+
 ## :exclamation: 개발과정 및 역할분담
-### 1. 개발과정
 - 1차 회의(201125)
 ```
 //참석자 : 김연서, 김혜정, 이지연
@@ -97,8 +100,4 @@ http://dbpt10.dothome.co.kr/final/intro.html
 각 개발 과정에 대한 회의록 전문 
 https://docs.google.com/document/d/1e8HGwMeWKJhhNpcsvZtUjkGENvkqhnQ0oDc9zJjqaZc/edit
 
-### 2. 역할분담
-- 20180971 김연서 : 
-- 20180977 김혜정 : 
-- 20172049 백지우 : 
-- 20160530 이지연 : 
+
