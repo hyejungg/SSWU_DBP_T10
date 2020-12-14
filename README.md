@@ -5,7 +5,7 @@
 ## 🧻홈페이지 링크
 http://dbpt10.dothome.co.kr/final/intro.html
 
-//최종코드 final 폴더 + images 폴더
+최종코드는 final 폴더와 images 폴더를 참고해주세요!
 
 ## 💩홈페이지 소개
 
