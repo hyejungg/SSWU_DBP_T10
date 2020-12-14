@@ -9,7 +9,7 @@ http://dbpt10.dothome.co.kr/final/intro.html
 
 ## 💩홈페이지 소개
 
-❣️ ### 본 페이지로 들어가기 전, 개발 배경과 소감 등 프로젝트에 대한 전반적인 정보를 제공합니다.
+### ❣️ 본 페이지로 들어가기 전, 개발 배경과 소감 등 프로젝트에 대한 전반적인 정보를 제공합니다.
 <img width="960" alt="intro" src="https://user-images.githubusercontent.com/70576313/102041089-d7c04400-3e11-11eb-9d54-8ad111d5aa97.png"> 
  
 <img width="960" alt="index" src="https://user-images.githubusercontent.com/70576313/102040997-a3e51e80-3e11-11eb-9e09-c9118b6c5e4e.png">
