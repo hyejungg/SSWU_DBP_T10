@@ -8,8 +8,10 @@ http://dbpt10.dothome.co.kr/final/intro.html
 //최종코드 final 폴더 + images 폴더
 
 ## 💩홈페이지 소개
+
+❣️ ### 본 페이지로 들어가기 전, 개발 배경과 소감 등 프로젝트에 대한 전반적인 정보를 제공합니다.
 <img width="960" alt="intro" src="https://user-images.githubusercontent.com/70576313/102041089-d7c04400-3e11-11eb-9d54-8ad111d5aa97.png"> 
-❣️ 본 페이지로 들어가기 전, 개발 배경과 소감 등 프로젝트에 대한 전반적인 정보를 제공합니다. 
+ 
 <img width="960" alt="index" src="https://user-images.githubusercontent.com/70576313/102040997-a3e51e80-3e11-11eb-9e09-c9118b6c5e4e.png">
 <img width="960" alt="select" src="https://user-images.githubusercontent.com/70576313/102041117-e73f8d00-3e11-11eb-93d7-2ab0cb819c3a.png"> 
 <img width="960" alt="search_city" src="https://user-images.githubusercontent.com/70576313/102041132-f1fa2200-3e11-11eb-9b64-9a30dfe278b3.png">
