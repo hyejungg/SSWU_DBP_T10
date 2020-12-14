@@ -1,11 +1,11 @@
 # 전국공중화장실현황
 2020-2 SSWU DBP-T10 기말과제
-//20160530 이지연, 20172049 백지우, 20180971 김연서, 20180977 김혜정
+(20160530 이지연, 20172049 백지우, 20180971 김연서, 20180977 김혜정)
 
 ## :exclamation: 홈페이지 링크
 http://dbpt10.dothome.co.kr/final/intro.html
 
-//최종 final 폴더 + images 폴더
+//최종코드 final 폴더 + images 폴더
 
 ## :exclamation: 홈페이지 소개
 
