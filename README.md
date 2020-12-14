@@ -115,7 +115,7 @@ http://dbpt10.dothome.co.kr/final/intro.html
 #혜정 : 웹서버에 db import 완료, 코드 병합 + 호스팅 서버에 파일 올리기, 한줄 소감 작성
 - 다음 회의 일정 : 12/14, 15시 Zoom (변동 가능)
 ```
-각 개발 과정에 대한 회의록 전문 
+✏️각 개발 과정에 대한 회의록 전문 
 https://docs.google.com/document/d/1e8HGwMeWKJhhNpcsvZtUjkGENvkqhnQ0oDc9zJjqaZc/edit
 
 
